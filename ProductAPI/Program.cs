@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using System.Xml.Linq;
 using TechGearDatabase.Data;
 using TechGearDatabase.Models;
@@ -94,16 +95,16 @@ namespace ProductAPI
                     return Results.Ok($"'{productToUpdate.Name}' has been updated");
                 }
             });
+
             //Delete
-            /*
-            app.MapDelete("/product", (Product product) =>
+            app.MapDelete("/product", async([FromBody]Product product) =>
             {
                 //Might not need to be awaited
-                db.DeleteData(productTable, product);
+                await db.DeleteData(productTable, product);
 
                 return Results.Ok($"{product.Name} was deleted");
             });
-            */
+            
 
             //*******************************************************
             app.Run();
