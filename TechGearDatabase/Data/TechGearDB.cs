@@ -11,11 +11,11 @@ namespace TechGearDatabase.Data
     public class TechGearDB
     {
         IMongoDatabase db;
-        private string connectionString = Environment.GetEnvironmentVariable("TechGearComponents_ConnectionString_Database");
+        private string connectionString = Environment.GetEnvironmentVariable("mongodb+srv://MichaelOfTheMoon:NiNjA717@michaelmoon.ehh0vbm.mongodb.net/?retryWrites=true&w=majority");
 
         public TechGearDB(string database)
         {
-            var client = new MongoClient(connectionString);
+            var client = new MongoClient("mongodb+srv://MichaelOfTheMoon:NiNjA717@michaelmoon.ehh0vbm.mongodb.net/?retryWrites=true&w=majority");
             db = client.GetDatabase(database);
         }
 

@@ -34,9 +34,9 @@ namespace ProductAPI
             string productTable = DataCollection.Product.ToString();
 
             //Create
-            app.MapPost("/product", async (string name, double price) =>
+            app.MapPost("/product", async (Product data) =>
             {
-                Product product = new Product (name, price);
+                Product product = new Product (data.Name, data.Price);
                 await db.AddData(productTable, product);
 
                 return Results.Ok($"{product.Name} was added to database");
