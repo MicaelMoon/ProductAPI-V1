@@ -11,7 +11,7 @@ namespace TechGearDatabase.Data
     public class TechGearDB
     {
         IMongoDatabase db;
-        private string connectionString = Environment.GetEnvironmentVariable("mongodb+srv://MichaelOfTheMoon:NiNjA717@michaelmoon.ehh0vbm.mongodb.net/?retryWrites=true&w=majority");
+        //private string connectionString = Environment.GetEnvironmentVariable("mongodb+srv://MichaelOfTheMoon:NiNjA717@michaelmoon.ehh0vbm.mongodb.net/?retryWrites=true&w=majority");
 
         public TechGearDB(string database)
         {
