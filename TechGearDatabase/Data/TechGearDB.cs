@@ -62,7 +62,7 @@ namespace TechGearDatabase.Data
         {
             var collection = db.GetCollection<T>(table);
 
-            await collection.DeleteOneAsync(d=>d.Id == d.Id);
+            await collection.DeleteOneAsync(d=>d.Id == data.Id);
         }
     }
 }
